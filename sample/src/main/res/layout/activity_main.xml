@@ -28,31 +28,31 @@
 
     <com.alien.captchainputview.CaptchaInputView
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:borderColor="@android:color/holo_orange_dark"
         app:borderRadius="14dp"
         app:borderWidth="2dp"
-        app:borderColor="@android:color/holo_orange_dark"
-        android:layout_marginTop="12dp"
-        app:textSize="40sp"
-        android:layout_height="wrap_content" />
+        app:textSize="40sp" />
 
     <com.alien.captchainputview.CaptchaInputView
         android:layout_width="match_parent"
-        app:borderWidth="3dp"
-        app:borderHighlightColor="@color/colorAccent"
+        android:layout_height="wrap_content"
         app:borderColor="@android:color/holo_blue_light"
-        app:itemSpace="12dp"
+        app:borderHighlightColor="@color/colorAccent"
+        app:borderWidth="3dp"
         app:cipherEnable="false"
+        app:itemSpace="12dp"
         app:mode="underline"
-        app:textSize="32sp"
-        android:layout_height="wrap_content" />
+        app:textSize="32sp" />
 
     <com.alien.captchainputview.CaptchaInputView
-        android:layout_marginTop="12dp"
-        app:contentLength="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
+        android:layout_marginTop="12dp"
         app:borderLength="30dp"
         app:borderWidth="1dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        app:contentLength="10" />
 
 </LinearLayout>
