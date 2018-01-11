@@ -28,8 +28,6 @@ import java.util.Stack;
 
 public class CaptchaInputView extends View {
 
-    public static int[] ATTRS = new int[]{android.R.attr.textSize,android.R.attr.textColor};
-    private static final String TAG = "CaptchaInputView";
     DisplayMetrics dm;
 
     @Mode
@@ -41,7 +39,7 @@ public class CaptchaInputView extends View {
     int borderWidth;
     int borderLength;
     int itemSpace;
-    int textSize = 14;
+    int textSize;
     int textColor = Color.BLACK;
     boolean cipherEnable = true;
     boolean autoComplete = true;
@@ -105,7 +103,7 @@ public class CaptchaInputView extends View {
         itemSpace = typedArray.getDimensionPixelOffset(R.styleable.CaptchaInputView_itemSpace, dp2px(12));
         cipherEnable = typedArray.getBoolean(R.styleable.CaptchaInputView_cipherEnable, cipherEnable);
         autoComplete = typedArray.getBoolean(R.styleable.CaptchaInputView_autoComplete, autoComplete);
-        textSize = typedArray.getDimensionPixelSize(R.styleable.CaptchaInputView_textSize,textSize);
+        textSize = typedArray.getDimensionPixelSize(R.styleable.CaptchaInputView_textSize,dp2px(14));
         textColor = typedArray.getColor(R.styleable.CaptchaInputView_textColor,borderColor);
         typedArray.recycle();
 
@@ -122,14 +120,11 @@ public class CaptchaInputView extends View {
         switch (widthMode) {
             case MeasureSpec.UNSPECIFIED:
             case MeasureSpec.AT_MOST:
-                //没有指定大小，宽度 = 单个密码框大小 * 密码位数 + 密码框间距 *（密码位数 - 1）
                 if (mode == Mode.border) width = borderLength*contentLength - (contentLength-1)*borderWidth;
                 else width = borderLength * contentLength + itemSpace * (contentLength - 1);
                 break;
             case MeasureSpec.EXACTLY:
-                //指定大小，宽度 = 指定的大小
                 width = MeasureSpec.getSize(widthMeasureSpec);
-                //密码框大小 =  (宽度 - 密码框间距 *(密码位数 - 1)) / 密码位数
                 if (mode == Mode.border) {
                     borderLength = (width - borderWidth * (contentLength + 1)) / contentLength + borderWidth * 2;
                 } else if (mode == Mode.borderSparse) {
