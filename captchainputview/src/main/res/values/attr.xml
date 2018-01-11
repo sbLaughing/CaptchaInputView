@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CaptchaInputView">
+        <attr name="mode" format="enum">
+            <enum name="underline" value="0"/>
+            <enum name="border" value="1"/>
+            <enum name="borderSparse" value="2"/>
+        </attr>
+
+        <attr name="contentLength" format="integer"/>
+        <attr name="borderRadius" format="dimension"/>
+        <attr name="borderColor" format="color"/>
+        <attr name="borderHighlightColor" format="color"/>
+        <attr name="borderWidth" format="dimension"/>
+        <attr name="borderLength" format="dimension"/>
+        <attr name="itemSpace" format="dimension"/>
+        <attr name="cipherEnable" format="boolean"/>
+        <attr name="autoComplete" format="boolean"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="color"/>
+    </declare-styleable>
+</resources>

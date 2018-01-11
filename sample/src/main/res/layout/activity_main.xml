@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context="com.alien.sample.MainActivity">
+
+
+    <com.alien.captchainputview.CaptchaInputView
+        android:id="@+id/mCaptchaInputView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:autoComplete="false"
+        app:borderHighlightColor="@color/colorAccent"
+        app:borderLength="60dp"
+        app:borderRadius="14dp"
+        app:borderWidth="4px"
+        app:cipherEnable="false"
+        app:contentLength="6"
+        app:itemSpace="10dp"
+        app:mode="borderSparse"
+        app:textColor="@color/colorAccent"
+        app:textSize="14sp" />
+
+    <com.alien.captchainputview.CaptchaInputView
+        android:layout_width="match_parent"
+        app:borderRadius="14dp"
+        app:borderWidth="2dp"
+        app:borderColor="@android:color/holo_orange_dark"
+        android:layout_marginTop="12dp"
+        app:textSize="40sp"
+        android:layout_height="wrap_content" />
+
+    <com.alien.captchainputview.CaptchaInputView
+        android:layout_width="match_parent"
+        app:borderWidth="3dp"
+        app:borderHighlightColor="@color/colorAccent"
+        app:borderColor="@android:color/holo_blue_light"
+        app:itemSpace="12dp"
+        app:cipherEnable="false"
+        app:mode="underline"
+        app:textSize="32sp"
+        android:layout_height="wrap_content" />
+
+    <com.alien.captchainputview.CaptchaInputView
+        android:layout_marginTop="12dp"
+        app:contentLength="10"
+
+        app:borderLength="30dp"
+        app:borderWidth="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
