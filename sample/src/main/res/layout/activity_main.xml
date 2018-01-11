@@ -10,7 +10,6 @@
 
 
     <com.alien.captchainputview.CaptchaInputView
-        android:id="@+id/mCaptchaInputView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -28,6 +27,7 @@
 
     <com.alien.captchainputview.CaptchaInputView
         android:layout_width="match_parent"
+        android:id="@+id/mCaptchaInputView"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         app:borderColor="@android:color/holo_orange_dark"

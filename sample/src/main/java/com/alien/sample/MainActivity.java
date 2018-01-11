@@ -1,8 +1,7 @@
 package com.alien.sample;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 
 import com.alien.captchainputview.CaptchaInputView;
 import com.alien.captchainputview.ICaptchaViewListener;
@@ -19,12 +18,10 @@ public class MainActivity extends AppCompatActivity {
         ((CaptchaInputView)findViewById(R.id.mCaptchaInputView)).setICaptchaViewListener(new ICaptchaViewListener() {
             @Override
             public void onContentChanged(String content) {
-                Log.d(TAG, "onContentChanged: content="+content);
             }
 
             @Override
             public void onComplete(String content) {
-                Log.d(TAG, "onComplete: content="+content);
             }
         });
     }

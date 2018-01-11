@@ -42,14 +42,28 @@
 ```
 <com.alien.captchainputview.CaptchaInputView
         android:layout_width="match_parent"
+        android:id="@+id/mCaptchaInputView"
         android:layout_height="wrap_content"
-        app:borderColor="@android:color/holo_blue_light"
-        app:borderHighlightColor="@color/colorAccent"
-        app:borderWidth="3dp"
-        app:cipherEnable="false"
-        app:itemSpace="12dp"
-        app:mode="underline"
-        app:textSize="32sp" />
+        android:layout_marginTop="12dp"
+        app:borderColor="@android:color/holo_orange_dark"
+        app:borderRadius="14dp"
+        app:borderWidth="2dp"
+        app:textSize="40sp" />
+```
+
+在jiava中设置回调：
+
+```
+((CaptchaInputView)findViewById(R.id.mCaptchaInputView)).setICaptchaViewListener(new ICaptchaViewListener() {
+            @Override
+            public void onContentChanged(String content) {
+            }
+
+            @Override
+            public void onComplete(String content) {
+            }
+        });
+
 ```
 
 
